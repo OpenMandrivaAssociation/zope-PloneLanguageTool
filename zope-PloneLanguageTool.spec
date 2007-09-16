@@ -1,25 +1,25 @@
-%define product		PloneLanguageTool
-%define ver		1.5
-%define rel		1
+%define Product PloneLanguageTool
+%define product plonelanguagetool
+%define name    zope-%{Product}
+%define version 2.0
+%define release %mkrel 1
 
 %define zope_minver	2.7
-
 %define zope_home	%{_prefix}/lib/zope
 %define software_home	%{zope_home}/lib/python
 
-
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
 Summary:	PloneLanguageTool allows to set the available languages in a Plone site
-Name:		zope-%{product}
-Version:	%{ver}
-Release:	%mkrel %{rel}
 License:	GPL
 Group:		System/Servers
-Source:		http://plone.org/products/plonelanguagetool/releases/%{version}/PloneLanguageTool-%{version}.tar.bz2
-URL:		http://plone.org/products/plonelanguagetool
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-root
-BuildArch:	noarch
+URL:        http://plone.org/products/%{product}
+Source:     http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.gz
 Requires:	zope >= %{zope_minver}
 Requires:	plone >= 2.0.5
+BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
  PloneLanguageTool allows you to set the available languages in your Plone
@@ -54,9 +54,5 @@ if [ -f "%{_prefix}/bin/zopectl" ] && [ "`%{_prefix}/bin/zopectl status`" != "da
 fi
 
 %files
-%defattr(-, root, root, 0755)
+%defattr(-,root,root)
 %{software_home}/Products/*
-
-
-
-
