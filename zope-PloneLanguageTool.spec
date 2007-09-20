@@ -2,7 +2,7 @@
 %define product plonelanguagetool
 %define name    zope-%{Product}
 %define version 2.0
-%define release %mkrel 1
+%define release %mkrel 2
 
 %define zope_minver	2.7
 %define zope_home	%{_prefix}/lib/zope
@@ -17,7 +17,7 @@ Group:		System/Servers
 URL:        http://plone.org/products/%{product}
 Source:     http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.gz
 Requires:	zope >= %{zope_minver}
-Requires:	plone >= 2.0.5
+Requires:	zope-Plone >= 2.0.5
 BuildArch:  noarch
 BuildRoot:  %{_tmppath}/%{name}-%{version}
 
