@@ -1,8 +1,8 @@
 %define Product PloneLanguageTool
 %define product plonelanguagetool
 %define name    zope-%{Product}
-%define version 2.0
-%define release %mkrel 2
+%define version 2.0.1
+%define release %mkrel 1
 
 %define zope_minver	2.7
 %define zope_home	%{_prefix}/lib/zope
@@ -14,15 +14,15 @@ Release:	%{release}
 Summary:	PloneLanguageTool allows to set the available languages in a Plone site
 License:	GPL
 Group:		System/Servers
-URL:        http://plone.org/products/%{product}
-Source:     http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.gz
+URL:		http://plone.org/products/%{product}
+Source:		http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.gz
 Requires:	zope >= %{zope_minver}
 Requires:	zope-Plone >= 2.0.5
-BuildArch:  noarch
-BuildRoot:  %{_tmppath}/%{name}-%{version}
+BuildArch:	noarch
+BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
- PloneLanguageTool allows you to set the available languages in your Plone
+PloneLanguageTool allows you to set the available languages in your Plone
 site, select various fallback mechanisms, and control the use of flags
 for language selection and translations.
 
