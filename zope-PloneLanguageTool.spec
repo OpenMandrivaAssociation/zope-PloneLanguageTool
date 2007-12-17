@@ -19,7 +19,6 @@ Source:		http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{v
 Requires:	zope >= %{zope_minver}
 Requires:	zope-Plone >= 2.0.5
 BuildArch:	noarch
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 PloneLanguageTool allows you to set the available languages in your Plone
