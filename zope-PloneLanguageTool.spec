@@ -14,7 +14,7 @@ Release:	%{release}
 Summary:	PloneLanguageTool allows to set the available languages in a Plone site
 License:	GPL
 Group:		System/Servers
-URL:		http://plone.org/products/%{product}
+URL:		https://plone.org/products/%{product}
 Source:		http://plone.org/products/%{product}/releases/%{version}/%{Product}-%{version}.tar.gz
 Requires:	zope >= %{zope_minver}
 Requires:	zope-Plone >= 2.0.5
